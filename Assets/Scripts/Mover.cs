@@ -9,6 +9,9 @@ public class Mover : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(0.1f, 0.0f, 0.0f);
+        float xValue = Input.GetAxis("Horizontal");
+        float yValue = 0f;
+        float zValue = Input.GetAxis("Vertical");
+        transform.Translate(xValue, yValue, zValue);
     }
 }
