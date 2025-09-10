@@ -1,8 +1,9 @@
 using UnityEngine;
+using TMPro;
 
 public class Scorer : MonoBehaviour
 {
-
+    public TextMeshProUGUI GameText;
     int hits = 0;
 
     void OnCollisionEnter(Collision other)
@@ -10,7 +11,7 @@ public class Scorer : MonoBehaviour
         if (other.gameObject.tag != "Hit")
         {
             hits++;
-            Debug.Log("You've Bumped Into A Thing Many Times: " + hits);
+            GameText.text = "You've Hit Something " + hits + " Times";
         }
         
     }
